@@ -1,0 +1,4 @@
+com\mkostsov\TinkoffStockService\service\TinkoffStockServiceTest.class
+com\mkostsov\TinkoffStockService\APITest.class
+com\mkostsov\TinkoffStockService\controller\StockControllerTest.class
+com\mkostsov\TinkoffStockService\StockApiApplicationTests.class

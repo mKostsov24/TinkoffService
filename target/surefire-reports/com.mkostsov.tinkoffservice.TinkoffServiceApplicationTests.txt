@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.mkostsov.tinkoffservice.TinkoffServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.883 s - in com.mkostsov.tinkoffservice.TinkoffServiceApplicationTests
