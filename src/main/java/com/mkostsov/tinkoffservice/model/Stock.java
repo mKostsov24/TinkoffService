@@ -1,6 +1,6 @@
 package com.mkostsov.tinkoffservice.model;
 
-import com.mkostsov.tinkoffservice.model.enums.Currency;
+import com.mkostsov.tinkoffservice.model.enums.CurrencyEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
@@ -13,6 +13,6 @@ public class Stock {
     String figi;
     String name;
     String type;
-    Currency currency;
+    CurrencyEnum currencyEnum;
     String source;
 }

@@ -1,6 +1,7 @@
 package com.mkostsov.tinkoffservice.service;
 
 import com.mkostsov.tinkoffservice.model.Stock;
+import com.mkostsov.tinkoffservice.model.enums.CurrencyEnum;
 import com.mkostsov.tinkoffservice.service.impl.TinkoffStockService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -32,7 +33,7 @@ class TinkoffStockServiceTest {
     public static final String STOCK_NAME = "Test name";
     public static final String STOCK_TICKER = "Test ticker";
     public static final String STOCK_TYPE = "Etf";
-    public static final com.mkostsov.tinkoffservice.model.enums.Currency STOCK_CURR = com.mkostsov.tinkoffservice.model.enums.Currency.RUB;
+    public static final CurrencyEnum STOCK_CURR = CurrencyEnum.RUB;
 
 
     @BeforeEach
@@ -60,7 +61,7 @@ class TinkoffStockServiceTest {
         assertEquals(STOCK_NAME, actualStock.getName());
         assertEquals(STOCK_TICKER, actualStock.getTicker());
         assertEquals(STOCK_TYPE, actualStock.getType());
-        assertEquals(STOCK_CURR, actualStock.getCurrency());
+        assertEquals(STOCK_CURR, actualStock.getCurrencyEnum());
 
         verify(api, times(1)).getMarketContext();
     }

@@ -1,6 +1,6 @@
 package com.mkostsov.tinkoffservice.model.enums;
 
-public enum Currency {
+public enum CurrencyEnum {
     RUB("RUB"),
     USD("USD"),
     EUR("EUR"),
@@ -13,7 +13,7 @@ public enum Currency {
 
     private String currency;
 
-    Currency(String currency) {
+    CurrencyEnum(String currency) {
         this.currency = currency;
     }
 }

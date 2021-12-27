@@ -2,7 +2,7 @@ package com.mkostsov.tinkoffservice.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mkostsov.tinkoffservice.model.Stock;
-import com.mkostsov.tinkoffservice.model.enums.Currency;
+import com.mkostsov.tinkoffservice.model.enums.CurrencyEnum;
 import com.mkostsov.tinkoffservice.service.api.StockService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -31,9 +31,9 @@ class StockControllerTest {
     public static final String NAME = "Finex test";
     public static final String TYPE = "Etf";
     public static final String FIGI = "figi";
-    public static final Currency CURRENCY = Currency.RUB;
+    public static final CurrencyEnum CURRENCY_ENUM = CurrencyEnum.RUB;
     public static final String SOURCE = "TINKOFF";
-    Stock actualStock = new Stock(FXTEST, FIGI, NAME, TYPE, CURRENCY, SOURCE);
+    Stock actualStock = new Stock(FXTEST, FIGI, NAME, TYPE, CURRENCY_ENUM, SOURCE);
 
     @BeforeEach
     void beforeEach() {

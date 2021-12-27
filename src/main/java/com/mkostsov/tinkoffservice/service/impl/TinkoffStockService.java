@@ -3,7 +3,7 @@ package com.mkostsov.tinkoffservice.service.impl;
 import com.mkostsov.tinkoffservice.dto.*;
 import com.mkostsov.tinkoffservice.exception.StockNotFoundException;
 import com.mkostsov.tinkoffservice.model.Stock;
-import com.mkostsov.tinkoffservice.model.enums.Currency;
+import com.mkostsov.tinkoffservice.model.enums.CurrencyEnum;
 import com.mkostsov.tinkoffservice.service.api.StockService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -46,7 +46,7 @@ public class TinkoffStockService implements StockService {
                 .figi(item.getFigi())
                 .name(item.getName())
                 .type(item.getType().getValue())
-                .currency(Currency.valueOf(item.getCurrency().getValue()))
+                .currencyEnum(CurrencyEnum.valueOf(item.getCurrency().getValue()))
                 .source("TINKOFF")
                 .build();
     }
@@ -69,7 +69,7 @@ public class TinkoffStockService implements StockService {
                         .figi(mi.getFigi())
                         .name(mi.getName())
                         .type(mi.getType().getValue())
-                        .currency(Currency.valueOf(mi.getCurrency().getValue()))
+                        .currencyEnum(CurrencyEnum.valueOf(mi.getCurrency().getValue()))
                         .source("TINKOFF")
                         .build()
                 )
